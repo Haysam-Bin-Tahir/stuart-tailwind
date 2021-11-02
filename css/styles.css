@@ -1,0 +1,18 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+    .active-nav-link {
+        @apply text-primary;
+        @apply relative;
+        @apply after:absolute;
+        @apply after:w-full;
+        @apply after:h-1;
+        @apply after:bg-primary;
+        @apply after:bottom-0;
+        @apply after:left-0;
+        @apply after:rounded-tl-md;
+        @apply after:rounded-tr-md;
+    }
+}
