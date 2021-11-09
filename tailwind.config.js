@@ -12,6 +12,7 @@ module.exports = {
       lightBlue: "#93C5FD",
       black: "#000",
       grey: "#D8D8D8",
+      gray: "#DEDEDE",
       darkGrey: "#999",
       green: "#10B981",
       yellow: "#F59E0B",
@@ -19,7 +20,17 @@ module.exports = {
     boxShadow: {
       DEFAULT: "5px 5px 5px rgba(0 0 0 / 10%)",
     },
-    extend: {},
+    extend: {
+      width: {
+        "1/7": "14.2857143%",
+        "2/7": "28.5714286%",
+        "3/7": "42.8571429%",
+        "4/7": "57.1428571%",
+        "5/7": "71.4285714%",
+        "6/7": "85.7142857%",
+        "3/10": "30%",
+      },
+    },
   },
   variants: {
     extend: {},

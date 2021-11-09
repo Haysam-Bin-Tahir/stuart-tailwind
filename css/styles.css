@@ -3,16 +3,40 @@
 @tailwind utilities;
 
 @layer utilities {
-    .active-nav-link {
-        @apply text-primary;
-        @apply relative;
-        @apply after:absolute;
-        @apply after:w-full;
-        @apply after:h-1;
-        @apply after:bg-primary;
-        @apply after:bottom-0;
-        @apply after:left-0;
-        @apply after:rounded-tl-md;
-        @apply after:rounded-tr-md;
-    }
+  .active-nav-link {
+    @apply text-primary;
+    @apply relative;
+    @apply after:absolute;
+    @apply after:w-full;
+    @apply after:h-1;
+    @apply after:bg-primary;
+    @apply after:bottom-0;
+    @apply after:left-0;
+    @apply after:rounded-tl-md;
+    @apply after:rounded-tr-md;
+  }
+  label:after {
+    content: "+";
+    position: absolute;
+    @apply top-3;
+    right: 1em;
+    @apply text-2xl;
+    @apply text-black;
+  }
+
+  input:checked + label:after {
+    content: "-";
+    line-height: 0.8em;
+    @apply top-3;
+    @apply text-2xl;
+    @apply text-black;
+  }
+
+  .accordion__content {
+    max-height: 0em;
+    transition: all 0.4s cubic-bezier(0.865, 0.14, 0.095, 0.87);
+  }
+  input[name="faq"]:checked ~ .accordion__content {
+    max-height: 50em;
+  }
 }
