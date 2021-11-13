@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+    <title>Offers</title>
+  </head>
+
+  <body class="bg-blueGrayLight">
+    <div class="mt-5 w-full h-full">
+      <div class="md:w-3/5 sm:px-16 px-6 w-full h-full pt-8 rounded">
+        <p class="text-3xl font-bold mb-6">Offers</p>
+        <div
+          class="flex flex-col bg-white shadow p-10 border-l-8 border-primary"
+        >
+          <canvas id="myChart" style="width: 100%; max-width: 600px"></canvas>
+        </div>
+        <div class="flex flex-col my-6">
+          <div class="-my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
+            <div
+              class="py-2 align-middle inline-block min-w-full sm:px-6 lg:px-8"
+            >
+              <div class="shadow overflow-hidden">
+                <table class="min-w-full">
+                  <thead class="bg-primaryDark">
+                    <tr>
+                      <th
+                        scope="col"
+                        class="
+                          px-6
+                          py-4
+                          text-center text-sm
+                          font-medium
+                          text-white
+                          tracking-wider
+                        "
+                      >
+                        Offers
+                      </th>
+                      <th
+                        scope="col"
+                        class="
+                          px-6
+                          py-4
+                          text-center text-sm
+                          font-medium
+                          text-white
+                          tracking-wider
+                        "
+                      >
+                        Total Invitations Sent
+                      </th>
+                      <th
+                        scope="col"
+                        class="
+                          px-6
+                          py-4
+                          text-center text-sm
+                          font-medium
+                          text-white
+                          tracking-wider
+                        "
+                      >
+                        Offers Redeemed
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody class="bg-white">
+                    <tr>
+                      <td class="px-6 py-4 text-center whitespace-nowrap">
+                        Offer 1
+                      </td>
+                      <td class="px-6 py-4 text-center whitespace-nowrap">
+                        40
+                      </td>
+                      <td class="px-6 py-4 text-center whitespace-nowrap">
+                        24
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="px-6 py-4 text-center whitespace-nowrap">
+                        Offer 2
+                      </td>
+                      <td class="px-6 py-4 text-center whitespace-nowrap">
+                        40
+                      </td>
+                      <td class="px-6 py-4 text-center whitespace-nowrap">
+                        24
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="px-6 py-4 text-center whitespace-nowrap">
+                        Offer 3
+                      </td>
+                      <td class="px-6 py-4 text-center whitespace-nowrap">
+                        40
+                      </td>
+                      <td class="px-6 py-4 text-center whitespace-nowrap">
+                        24
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="px-6 py-4 text-center whitespace-nowrap">
+                        Offer 4
+                      </td>
+                      <td class="px-6 py-4 text-center whitespace-nowrap">
+                        40
+                      </td>
+                      <td class="px-6 py-4 text-center whitespace-nowrap">
+                        24
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="px-6 py-4 text-center whitespace-nowrap">
+                        Offer 5
+                      </td>
+                      <td class="px-6 py-4 text-center whitespace-nowrap">
+                        40
+                      </td>
+                      <td class="px-6 py-4 text-center whitespace-nowrap">
+                        24
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      var xValues = ["Offer 1", "Offer 2", "Offer 3", "Offer 4", "Offer 5"];
+      var yValues = [75, 49, 44, 24, 35];
+      var barColors = "#3790b4";
+
+      new Chart("myChart", {
+        type: "horizontalBar",
+        data: {
+          labels: xValues,
+          datasets: [
+            {
+              backgroundColor: barColors,
+              data: yValues,
+            },
+          ],
+        },
+        options: {
+          legend: { display: false },
+          title: {
+            display: true,
+            text: "Colleagues",
+          },
+          scales: {
+            xAxes: [
+              {
+                gridLines: {
+                  display: false,
+                },
+                scaleLabel: {
+                  display: true,
+                  labelString: "Number of Offers",
+                  fontStyle: "bold",
+                },
+              },
+            ],
+            yAxes: [
+              {
+                gridLines: {
+                  display: false,
+                },
+              },
+            ],
+          },
+        },
+      });
+    </script>
+  </body>
+</html>

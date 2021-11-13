@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+    <title>Referrals</title>
+  </head>
+
+  <body class="bg-blueGrayLight">
+    <div class="mt-5 w-full h-full">
+      <div class="md:w-3/5 sm:px-16 px-6 w-full h-full pt-8 rounded">
+        <p class="text-3xl font-bold mb-6">Referrals</p>
+        <div class="bg-white shadow p-10 border-l-8 mb-8 border-primary">
+          <canvas
+            id="referralsOffered"
+            style="width: 100%; max-width: 600px"
+          ></canvas>
+        </div>
+        <div class="bg-white shadow p-10 border-l-8 mb-8 border-primary">
+          <canvas
+            id="referralsFulfilled"
+            style="width: 100%; max-width: 600px"
+          ></canvas>
+        </div>
+        <div class="bg-white shadow p-10 border-l-8 mb-8 border-primary">
+          <canvas
+            id="referralsConversionRate"
+            style="width: 100%; max-width: 600px"
+          ></canvas>
+        </div>
+        <div class="bg-white shadow p-10 border-l-8 mb-8 border-primary">
+          <canvas
+            id="referralsVsSales"
+            style="width: 100%; max-width: 600px"
+          ></canvas>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      new Chart("referralsOffered", {
+        type: "line",
+        data: {
+          labels: [
+            "Jan",
+            "Feb",
+            "Mar",
+            "Apr",
+            "May",
+            "Jun",
+            "Jul",
+            "Aug",
+            "Sep",
+            "Oct",
+            "Nov",
+            "Dec",
+          ],
+          datasets: [
+            {
+              data: [10, 75, 25, 95, 135, 85, 135, 45, 20, 64, 185, 115],
+              borderColor: "red",
+              fill: false,
+              label: "Referees",
+            },
+            {
+              data: [0, 125, 75, 20, 25, 155, 175, 65, 85, 45, 65, 100],
+              borderColor: "green",
+              fill: false,
+              label: "Referrers",
+            },
+          ],
+        },
+        options: {
+          legend: { display: true },
+          title: {
+            display: true,
+            text: "Referrals Offered",
+          },
+          scales: {
+            xAxes: [
+              {
+                gridLines: {
+                  display: true,
+                },
+                scaleLabel: {
+                  display: true,
+                  labelString: "Time",
+                  fontStyle: "bold",
+                },
+              },
+            ],
+            yAxes: [
+              {
+                gridLines: {
+                  display: true,
+                },
+                scaleLabel: {
+                  display: true,
+                  labelString: "Number of Referrals",
+                  fontStyle: "bold",
+                },
+              },
+            ],
+          },
+        },
+      });
+      new Chart("referralsFulfilled", {
+        type: "line",
+        data: {
+          labels: [
+            "Jan",
+            "Feb",
+            "Mar",
+            "Apr",
+            "May",
+            "Jun",
+            "Jul",
+            "Aug",
+            "Sep",
+            "Oct",
+            "Nov",
+            "Dec",
+          ],
+          datasets: [
+            {
+              data: [10, 75, 25, 95, 135, 85, 135, 45, 20, 64, 185, 115],
+              borderColor: "red",
+              fill: false,
+              label: "Referees",
+            },
+            {
+              data: [0, 125, 75, 20, 25, 155, 175, 65, 85, 45, 65, 100],
+              borderColor: "green",
+              fill: false,
+              label: "Fulfilled",
+            },
+          ],
+        },
+        options: {
+          legend: { display: true },
+          title: {
+            display: true,
+            text: "Referrals Fulfilled",
+          },
+          scales: {
+            xAxes: [
+              {
+                gridLines: {
+                  display: true,
+                },
+                scaleLabel: {
+                  display: true,
+                  labelString: "Time",
+                  fontStyle: "bold",
+                },
+              },
+            ],
+            yAxes: [
+              {
+                gridLines: {
+                  display: true,
+                },
+                scaleLabel: {
+                  display: true,
+                  labelString: "Referrals Fulfilled",
+                  fontStyle: "bold",
+                },
+              },
+            ],
+          },
+        },
+      });
+      new Chart("referralsConversionRate", {
+        type: "line",
+        data: {
+          labels: [
+            "Jan",
+            "Feb",
+            "Mar",
+            "Apr",
+            "May",
+            "Jun",
+            "Jul",
+            "Aug",
+            "Sep",
+            "Oct",
+            "Nov",
+            "Dec",
+          ],
+          datasets: [
+            {
+              data: [10, 75, 25, 95, 135, 85, 135, 45, 20, 64, 185, 115],
+              borderColor: "red",
+              fill: false,
+              label: "Referrals",
+            },
+            {
+              data: [0, 125, 75, 20, 25, 155, 175, 65, 85, 45, 65, 100],
+              borderColor: "green",
+              fill: false,
+              label: "Conversion Rate",
+            },
+          ],
+        },
+        options: {
+          legend: { display: true },
+          title: {
+            display: true,
+            text: "Referrals Conversion Rate",
+          },
+          scales: {
+            xAxes: [
+              {
+                gridLines: {
+                  display: true,
+                },
+                scaleLabel: {
+                  display: true,
+                  labelString: "Time",
+                  fontStyle: "bold",
+                },
+              },
+            ],
+            yAxes: [
+              {
+                gridLines: {
+                  display: true,
+                },
+                scaleLabel: {
+                  display: true,
+                  labelString: "Conversion Rate",
+                  fontStyle: "bold",
+                },
+              },
+            ],
+          },
+        },
+      });
+      new Chart("referralsVsSales", {
+        type: "line",
+        data: {
+          labels: [
+            "Jan",
+            "Feb",
+            "Mar",
+            "Apr",
+            "May",
+            "Jun",
+            "Jul",
+            "Aug",
+            "Sep",
+            "Oct",
+            "Nov",
+            "Dec",
+          ],
+          datasets: [
+            {
+              data: [10, 75, 25, 95, 135, 85, 135, 45, 20, 64, 185, 115],
+              borderColor: "red",
+              fill: false,
+              label: "Referrals",
+            },
+            {
+              data: [0, 125, 75, 20, 25, 155, 175, 65, 85, 45, 65, 100],
+              borderColor: "green",
+              fill: false,
+              label: "Sales",
+            },
+          ],
+        },
+        options: {
+          legend: { display: true },
+          title: {
+            display: true,
+            text: "Referrals VS Sales",
+          },
+          scales: {
+            xAxes: [
+              {
+                gridLines: {
+                  display: true,
+                },
+                scaleLabel: {
+                  display: true,
+                  labelString: "Time",
+                  fontStyle: "bold",
+                },
+              },
+            ],
+            yAxes: [
+              {
+                gridLines: {
+                  display: true,
+                },
+                scaleLabel: {
+                  display: true,
+                  labelString: "Referrals % of total known sales",
+                  fontStyle: "bold",
+                },
+              },
+            ],
+          },
+        },
+      });
+    </script>
+  </body>
+</html>
