@@ -613,6 +613,14 @@ video {
 	margin-left: 0.25rem;
 	margin-right: 0.25rem;
 }
+.my-6 {
+	margin-top: 1.5rem;
+	margin-bottom: 1.5rem;
+}
+.-my-2 {
+	margin-top: -0.5rem;
+	margin-bottom: -0.5rem;
+}
 .-mx-3 {
 	margin-left: -0.75rem;
 	margin-right: -0.75rem;
@@ -668,6 +676,9 @@ video {
 }
 .mb-12 {
 	margin-bottom: 3rem;
+}
+.mb-8 {
+	margin-bottom: 2rem;
 }
 .mb-4 {
 	margin-bottom: 1rem;
@@ -848,6 +859,9 @@ video {
 .overflow-hidden {
 	overflow: hidden;
 }
+.overflow-x-auto {
+	overflow-x: auto;
+}
 .whitespace-nowrap {
 	white-space: nowrap;
 }
@@ -884,6 +898,9 @@ video {
 .border-b-2 {
 	border-bottom-width: 2px;
 }
+.border-l-8 {
+	border-left-width: 8px;
+}
 .border-dashed {
 	border-style: dashed;
 }
@@ -918,6 +935,10 @@ video {
 .bg-inputBorderGray {
 	--tw-bg-opacity: 1;
 	background-color: rgba(226, 232, 240, var(--tw-bg-opacity));
+}
+.bg-primaryDark {
+	--tw-bg-opacity: 1;
+	background-color: rgba(55, 144, 180, var(--tw-bg-opacity));
 }
 .bg-lightBlue {
 	--tw-bg-opacity: 1;
@@ -998,6 +1019,10 @@ video {
 .py-1 {
 	padding-top: 0.25rem;
 	padding-bottom: 0.25rem;
+}
+.py-4 {
+	padding-top: 1rem;
+	padding-bottom: 1rem;
 }
 .py-28 {
 	padding-top: 7rem;
@@ -1114,6 +1139,9 @@ video {
 }
 .tracking-tight {
 	letter-spacing: -0.025em;
+}
+.tracking-wider {
+	letter-spacing: 0.05em;
 }
 .tracking-wide {
 	letter-spacing: 0.025em;
@@ -1252,6 +1280,11 @@ input[name="faq"]:checked ~ .accordion__content {
 }
 @media (min-width: 640px) {
 
+	.sm\:-mx-6 {
+		margin-left: -1.5rem;
+		margin-right: -1.5rem;
+	}
+
 	.sm\:w-36 {
 		width: 9rem;
 	}
@@ -1263,6 +1296,11 @@ input[name="faq"]:checked ~ .accordion__content {
 	.sm\:px-16 {
 		padding-left: 4rem;
 		padding-right: 4rem;
+	}
+
+	.sm\:px-6 {
+		padding-left: 1.5rem;
+		padding-right: 1.5rem;
 	}
 }
 @media (min-width: 768px) {
@@ -1341,12 +1379,12 @@ input[name="faq"]:checked ~ .accordion__content {
 		width: 2rem;
 	}
 
-	.md\:w-3\/10 {
-		width: 30%;
-	}
-
 	.md\:w-3\/5 {
 		width: 60%;
+	}
+
+	.md\:w-3\/10 {
+		width: 30%;
 	}
 
 	.md\:w-2\/5 {
@@ -1409,6 +1447,11 @@ input[name="faq"]:checked ~ .accordion__content {
 }
 @media (min-width: 1024px) {
 
+	.lg\:-mx-8 {
+		margin-left: -2rem;
+		margin-right: -2rem;
+	}
+
 	.lg\:mt-0 {
 		margin-top: 0px;
 	}
@@ -1431,5 +1474,10 @@ input[name="faq"]:checked ~ .accordion__content {
 
 	.lg\:items-center {
 		align-items: center;
+	}
+
+	.lg\:px-8 {
+		padding-left: 2rem;
+		padding-right: 2rem;
 	}
 }

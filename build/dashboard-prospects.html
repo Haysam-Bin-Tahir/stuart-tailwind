@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+    <title>Prospects</title>
+  </head>
+
+  <body class="bg-blueGrayLight">
+    <div class="mt-5 w-full h-full">
+      <div class="md:w-3/5 sm:px-16 px-6 w-full h-full pt-8 rounded">
+        <p class="text-3xl font-bold mb-6">Prospects</p>
+        <div
+          class="flex flex-col bg-white shadow p-10 border-l-8 border-primary"
+        >
+          <canvas id="myChart" style="width: 100%; max-width: 600px"></canvas>
+        </div>
+        <div class="flex flex-col my-6">
+          <div class="-my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
+            <div
+              class="py-2 align-middle inline-block min-w-full sm:px-6 lg:px-8"
+            >
+              <div class="shadow overflow-hidden">
+                <table class="min-w-full">
+                  <thead class="bg-primaryDark">
+                    <tr>
+                      <th
+                        scope="col"
+                        class="
+                          px-6
+                          py-4
+                          text-center text-sm
+                          font-medium
+                          text-white
+                          tracking-wider
+                        "
+                      >
+                        Offer
+                      </th>
+                      <th
+                        scope="col"
+                        class="
+                          px-6
+                          py-4
+                          text-center text-sm
+                          font-medium
+                          text-white
+                          tracking-wider
+                        "
+                      >
+                        Email
+                      </th>
+                      <th
+                        scope="col"
+                        class="
+                          px-6
+                          py-4
+                          text-center text-sm
+                          font-medium
+                          text-white
+                          tracking-wider
+                        "
+                      >
+                        Telephone
+                      </th>
+                      <th
+                        scope="col"
+                        class="
+                          px-6
+                          py-4
+                          text-center text-sm
+                          font-medium
+                          text-white
+                          tracking-wider
+                        "
+                      >
+                        Date Added
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody class="bg-white">
+                    <tr>
+                      <td class="px-6 py-4 text-center whitespace-nowrap">
+                        Muzamil Hussain
+                      </td>
+                      <td class="px-6 py-4 text-center whitespace-nowrap">
+                        muzamilsethar@gmail.com
+                      </td>
+                      <td class="px-6 py-4 text-center whitespace-nowrap">
+                        012345 678910
+                      </td>
+                      <td class="px-6 py-4 text-center whitespace-nowrap">
+                        11/13/2021
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="px-6 py-4 text-center whitespace-nowrap">
+                        Muzamil Hussain
+                      </td>
+                      <td class="px-6 py-4 text-center whitespace-nowrap">
+                        muzamilsethar@gmail.com
+                      </td>
+                      <td class="px-6 py-4 text-center whitespace-nowrap">
+                        012345 678910
+                      </td>
+                      <td class="px-6 py-4 text-center whitespace-nowrap">
+                        11/13/2021
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="px-6 py-4 text-center whitespace-nowrap">
+                        Muzamil Hussain
+                      </td>
+                      <td class="px-6 py-4 text-center whitespace-nowrap">
+                        muzamilsethar@gmail.com
+                      </td>
+                      <td class="px-6 py-4 text-center whitespace-nowrap">
+                        012345 678910
+                      </td>
+                      <td class="px-6 py-4 text-center whitespace-nowrap">
+                        11/13/2021
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="px-6 py-4 text-center whitespace-nowrap">
+                        Muzamil Hussain
+                      </td>
+                      <td class="px-6 py-4 text-center whitespace-nowrap">
+                        muzamilsethar@gmail.com
+                      </td>
+                      <td class="px-6 py-4 text-center whitespace-nowrap">
+                        012345 678910
+                      </td>
+                      <td class="px-6 py-4 text-center whitespace-nowrap">
+                        11/13/2021
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="px-6 py-4 text-center whitespace-nowrap">
+                        Muzamil Hussain
+                      </td>
+                      <td class="px-6 py-4 text-center whitespace-nowrap">
+                        muzamilsethar@gmail.com
+                      </td>
+                      <td class="px-6 py-4 text-center whitespace-nowrap">
+                        012345 678910
+                      </td>
+                      <td class="px-6 py-4 text-center whitespace-nowrap">
+                        11/13/2021
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="px-6 py-4 text-center whitespace-nowrap">
+                        Muzamil Hussain
+                      </td>
+                      <td class="px-6 py-4 text-center whitespace-nowrap">
+                        muzamilsethar@gmail.com
+                      </td>
+                      <td class="px-6 py-4 text-center whitespace-nowrap">
+                        012345 678910
+                      </td>
+                      <td class="px-6 py-4 text-center whitespace-nowrap">
+                        11/13/2021
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="px-6 py-4 text-center whitespace-nowrap">
+                        Muzamil Hussain
+                      </td>
+                      <td class="px-6 py-4 text-center whitespace-nowrap">
+                        muzamilsethar@gmail.com
+                      </td>
+                      <td class="px-6 py-4 text-center whitespace-nowrap">
+                        012345 678910
+                      </td>
+                      <td class="px-6 py-4 text-center whitespace-nowrap">
+                        11/13/2021
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      new Chart("myChart", {
+        type: "line",
+        data: {
+          labels: [
+            "Jan",
+            "Feb",
+            "Mar",
+            "Apr",
+            "May",
+            "Jun",
+            "Jul",
+            "Aug",
+            "Sep",
+            "Oct",
+            "Nov",
+            "Dec",
+          ],
+          datasets: [
+            {
+              data: [10, 75, 25, 95, 135, 85, 135, 45, 20, 64, 185, 115],
+              borderColor: "red",
+              fill: false,
+              label: "New Prospects",
+            },
+            {
+              data: [0, 125, 75, 20, 25, 155, 175, 65, 85, 45, 65, 100],
+              borderColor: "green",
+              fill: false,
+              label: "Sales",
+            },
+          ],
+        },
+        options: {
+          legend: { display: true },
+          title: {
+            display: true,
+            text: "Prospects",
+          },
+          scales: {
+            xAxes: [
+              {
+                gridLines: {
+                  display: true,
+                },
+                scaleLabel: {
+                  display: true,
+                  labelString: "Time",
+                  fontStyle: "bold",
+                },
+              },
+            ],
+            yAxes: [
+              {
+                gridLines: {
+                  display: true,
+                },
+                scaleLabel: {
+                  display: true,
+                  labelString: "Number of Prospects",
+                  fontStyle: "bold",
+                },
+              },
+            ],
+          },
+        },
+      });
+    </script>
+  </body>
+</html>
