@@ -99,3 +99,7 @@ canvas[id=referralsVsSales] {
   margin: 0 auto !important;
   } 
 }
+
+label::after {
+  content: '' !important;
+}

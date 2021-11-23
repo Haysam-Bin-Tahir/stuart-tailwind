@@ -10,6 +10,61 @@
 </head>
 
 <body>
+    <nav class="flex items-center justify-between flex-wrap bg-white px-8 mdlg:px-16 fixed top-0 inset-x-0 z-20 shadow-md">
+        <div class="flex items-center justify-between">
+            <button id='sidebar-toggle-button'
+                class="flex items-center px-3 py-2 border rounded text-teal-200 border-teal-400 mr-4 block mdlg:hidden">
+                <svg class="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                    <title>Menu</title>
+                    <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
+                </svg>
+            </button>
+            <a href="#">
+                <img src='../public/images/logo.jpg' width="200" />
+            </a>
+        </div>
+        <div class="inline-block mdlg:flex mdlg:items-center mdlg:w-auto py-4 mdlg:py-0">
+            <div class="text-sm mr-6 hidden mdlg:inline-block">
+                <a href="#responsive-header"
+                    class="block mt-4 font-semibold mdlg:inline-block mdlg:mt-0 hover:text-primary mr-4 py-6">
+                    Make a Claim
+                </a>
+                <a href="#responsive-header"
+                    class="block mt-4 font-semibold mdlg:inline-block mdlg:mt-0 hover:text-primary mr-4 py-6">
+                    FAQs
+                </a>
+                <a href="#responsive-header"
+                    class="block mt-4 font-semibold mdlg:inline-block mdlg:mt-0 hover:text-primary py-6">
+                    Contact
+                </a>
+            </div>
+            <div>
+                <a href="#"
+                    class="inline-block text-sm px-4 py-2 leading-none border rounded text-primary hover:text-white border-primary hover:border-primary hover:bg-primary mt-0 lg:mt-0">Login</a>
+            </div>
+        </div>
+    </nav>
+    <div id='sidebar-menu'
+        class='fixed w-80 bg-white h-screen top-0 left-0 pt-16 sidebar sidebar-hidden transform transform-gpu shadow-md z-10'>
+        <div class="w-full">
+            <a class='w-full block px-16 py-6 border-b border-inputBorderGray font-semibold hover:text-primary' href='#'
+                role='button'>
+                Make a Claim
+            </a>
+        </div>
+        <div class="w-full">
+            <a class='w-full block px-16 py-6 border-b border-inputBorderGray font-semibold hover:text-primary' href='#'
+                role='button'>
+                FAQs
+            </a>
+        </div>
+        <div class="w-full">
+            <a class='w-full block px-16 py-6 border-b border-inputBorderGray font-semibold hover:text-primary' href='#'
+                role='button'>
+                Contact
+            </a>
+        </div>
+    </div>
     <div class="mt-20 p-5 flex justify-center">
         <div class="mx-4 p-4 md:w-3/5 w-full">
             <div class="flex items-center">
@@ -192,7 +247,7 @@
           justify-center
           items-center
         ">
-            <p class="align-center text-lightBlue text-2xl font-bold mb-6">
+            <p class="align-center text-primary text-2xl font-bold mb-6">
                 Thank You
             </p>
             <div class="w-full">
@@ -312,6 +367,7 @@
             </div>
         </div>
     </div>
+    <script src="../js/sidebar.js"></script>
 </body>
 
 </html>

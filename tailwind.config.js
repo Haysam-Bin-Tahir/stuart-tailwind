@@ -17,6 +17,9 @@ module.exports = {
       darkGrey: "#999",
       green: "#10B981",
       yellow: "#F59E0B",
+      gradientStart: '#1c94d1',
+      gradientMiddle: '#4caadd',
+      gradientEnd: '#72c5e5',
     },
     // boxShadow: {
     //   DEFAULT: "5px 5px 5px rgba(0 0 0 / 10%)",
