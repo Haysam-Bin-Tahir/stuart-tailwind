@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+    <title>Reports</title>
+  </head>
+
+  <body class="bg-blueGrayLight">
+    <nav class="flex items-center justify-between flex-wrap bg-white px-8 mdlg:px-16 fixed top-0 inset-x-0 z-10 shadow-md">
+      <div class="flex items-center justify-between">
+        <button id='sidebar-toggle-button'
+          class="flex items-center px-3 py-2 border rounded text-teal-200 border-teal-400 mr-4 block mdlg:hidden">
+          <svg class="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+            <title>Menu</title>
+            <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
+          </svg>
+        </button>
+        <a href="#">
+          <img src='../public/images/logo.jpg' width="200" />
+        </a>
+      </div>
+      <div class="inline-block lg:flex lg:items-center lg:w-auto py-4">
+        <div>
+          <a href="#">
+            <img class="rounded-full" src="../public/icons/profile-placeholder.jpg" width="30" />
+          </a>
+        </div>
+      </div>
+    </nav>
+    <div id='sidebar-menu'
+      class='fixed w-80 bg-white h-screen top-0 left-0 pt-16 sidebar sidebar-hidden transform transform-gpu mdlg:translate-x-0'>
+      <div class="w-full">
+        <a class='w-full block px-16 py-6 border-b border-inputBorderGray font-semibold hover:text-primary' href='#'
+          role='button'>
+          Offers
+        </a>
+      </div>
+      <div class="w-full">
+        <a class='w-full block px-16 py-6 border-b border-inputBorderGray font-semibold hover:text-primary' href='#'
+          role='button'>
+          Customers
+        </a>
+      </div>
+      <div class="w-full">
+        <a class='w-full block px-16 py-6 border-b border-inputBorderGray font-semibold hover:text-primary text-primary'
+          href='#' role='button'>
+          Reports
+        </a>
+      </div>
+      <div class="w-full pl-14">
+        <a class='w-full block px-8 py-2 font-semibold hover:text-primary' href='#' role='button'>
+          Invitations
+        </a>
+        <a class='w-full block px-8 py-2 font-semibold hover:text-primary' href='#' role='button'>
+          Referrals
+        </a>
+        <a class='w-full block px-8 py-2 font-semibold hover:text-primary' href='#' role='button'>
+          Colleagues
+        </a>
+        <a class='w-full block px-8 py-2 font-semibold hover:text-primary' href='#' role='button'>
+          Conversions
+        </a>
+        <a class='w-full block px-8 py-2 font-semibold hover:text-primary' href='#' role='button'>
+          Prospects
+        </a>
+        <a class='w-full block px-8 py-2 font-semibold hover:text-primary' href='#' role='button'>
+          Offers
+        </a>
+      </div>
+    </div>
+    <div class="mt-5 w-full mdlg:w-11/12 mx-auto h-full mdlg:pl-80 pt-14">
+      <div class="px-6 w-full h-full pt-8 rounded">
+        <div class="flex md:flex-row flex-col justify-between">
+          <div
+            class="
+              md:w-3/10
+              w-full
+              mb-12
+              md:mb-0
+              rounded
+              shadow
+              px-4
+              flex flex-col
+              bg-white
+              border-l-8 border-primary
+              py-3
+            "
+          >
+            <p class="text-base mb-1">Referrals Awaiting Fulfilment</p>
+            <div class="flex flex-1 items-end">
+              <p class="text-3xl font-bold text-primary flex-1">10</p>
+              <svg
+                aria-hidden="true"
+                focusable="false"
+                data-prefix="fas"
+                data-icon="arrow-right"
+                class="svg-inline--fa fa-arrow-right fa-w-14 w-5"
+                role="img"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 448 512"
+              >
+                <path
+                  fill="#2bade1"
+                  d="M190.5 66.9l22.2-22.2c9.4-9.4 24.6-9.4 33.9 0L441 239c9.4 9.4 9.4 24.6 0 33.9L246.6 467.3c-9.4 9.4-24.6 9.4-33.9 0l-22.2-22.2c-9.5-9.5-9.3-25 .4-34.3L311.4 296H24c-13.3 0-24-10.7-24-24v-32c0-13.3 10.7-24 24-24h287.4L190.9 101.2c-9.8-9.3-10-24.8-.4-34.3z"
+                ></path>
+              </svg>
+            </div>
+          </div>
+          <div
+            class="
+              md:w-3/10
+              w-full
+              mb-12
+              md:mb-0
+              rounded
+              shadow
+              px-4
+              flex flex-col
+              bg-white
+              border-l-8 border-primary
+              py-3
+            "
+          >
+            <p class="text-base mb-1">Prospects</p>
+            <div class="flex flex-1 items-end">
+              <p class="text-3xl font-bold text-primary flex-1">10</p>
+              <svg
+                aria-hidden="true"
+                focusable="false"
+                data-prefix="fas"
+                data-icon="arrow-right"
+                class="svg-inline--fa fa-arrow-right fa-w-14 w-5"
+                role="img"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 448 512"
+              >
+                <path
+                  fill="#2bade1"
+                  d="M190.5 66.9l22.2-22.2c9.4-9.4 24.6-9.4 33.9 0L441 239c9.4 9.4 9.4 24.6 0 33.9L246.6 467.3c-9.4 9.4-24.6 9.4-33.9 0l-22.2-22.2c-9.5-9.5-9.3-25 .4-34.3L311.4 296H24c-13.3 0-24-10.7-24-24v-32c0-13.3 10.7-24 24-24h287.4L190.9 101.2c-9.8-9.3-10-24.8-.4-34.3z"
+                ></path>
+              </svg>
+            </div>
+          </div>
+          <div
+            class="
+              md:w-3/10
+              w-full
+              mb-12
+              md:mb-0
+              rounded
+              shadow
+              px-4
+              flex flex-col
+              bg-white
+              border-l-8 border-primary
+              py-3
+            "
+          >
+            <p class="text-base mb-1">Referrals Generated</p>
+            <div class="flex flex-1 items-end">
+              <p class="text-3xl font-bold text-primary flex-1">10</p>
+              <svg
+                aria-hidden="true"
+                focusable="false"
+                data-prefix="fas"
+                data-icon="arrow-right"
+                class="svg-inline--fa fa-arrow-right fa-w-14 w-5"
+                role="img"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 448 512"
+              >
+                <path
+                  fill="#2bade1"
+                  d="M190.5 66.9l22.2-22.2c9.4-9.4 24.6-9.4 33.9 0L441 239c9.4 9.4 9.4 24.6 0 33.9L246.6 467.3c-9.4 9.4-24.6 9.4-33.9 0l-22.2-22.2c-9.5-9.5-9.3-25 .4-34.3L311.4 296H24c-13.3 0-24-10.7-24-24v-32c0-13.3 10.7-24 24-24h287.4L190.9 101.2c-9.8-9.3-10-24.8-.4-34.3z"
+                ></path>
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="px-6 w-full h-full pt-8 rounded">
+        <div class="flex md:flex-row flex-wrap justify-between">
+          <div
+            class="
+              md:w-3/7
+              w-full
+              mb-12
+              rounded
+              shadow
+              px-4
+              flex flex-col
+              bg-white
+              py-3
+            "
+          >
+            <p class="text-xl mb-1">Referrals Fulfilment</p>
+            <div class="border-b my-2 opacity-20 -mx-4"></div>
+            <div class="w-10/12 self-center mt-2">
+              <canvas id="reports"></canvas>
+            </div>
+
+            <button
+              class="
+                bg-white
+                hover:bg-primary
+                text-primary
+                hover:text-white
+                border-2 border-primary
+                font-bold
+                px-4
+                py-1
+                my-4
+                rounded-md
+                focus:outline-none focus:shadow-outline
+              "
+              type="submit"
+            >
+              Full Details
+            </button>
+          </div>
+          <div
+            class="
+              md:w-3/7
+              w-full
+              mb-12
+              rounded
+              shadow
+              px-4
+              flex flex-col
+              bg-white
+              py-3
+            "
+          >
+            <p class="text-xl mb-1">Prospects</p>
+            <div class="border-b my-2 opacity-20 -mx-4"></div>
+            <div class="w-10/12 self-center mt-2">
+              <canvas id="prospects"></canvas>
+            </div>
+
+            <button
+              class="
+                bg-white
+                hover:bg-primary
+                text-primary
+                hover:text-white
+                border-2 border-primary
+                font-bold
+                px-4
+                py-1
+                my-4
+                rounded-md
+                focus:outline-none focus:shadow-outline
+              "
+              type="submit"
+            >
+              Full Details
+            </button>
+          </div>
+          <div
+            class="
+              md:w-3/7
+              w-full
+              mb-12
+              rounded
+              shadow
+              px-4
+              flex flex-col
+              bg-white
+              py-3
+            "
+          >
+            <p class="text-xl mb-1">Offers</p>
+            <div class="border-b my-2 opacity-20 -mx-4"></div>
+            <div class="w-10/12 self-center mt-2">
+              <canvas id="offers"></canvas>
+            </div>
+
+            <button
+              class="
+                bg-white
+                hover:bg-primary
+                text-primary
+                hover:text-white
+                border-2 border-primary
+                font-bold
+                px-4
+                py-1
+                my-4
+                rounded-md
+                focus:outline-none focus:shadow-outline
+              "
+              type="submit"
+            >
+              Full Details
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      var xValues = ["Refferals Completed", "Referrals Awating Fulfilment"];
+      var yValues = [55, 49];
+      var barColors = ["#2bade1", "#3790b4"];
+
+      new Chart("reports", {
+        type: "doughnut",
+        data: {
+          labels: xValues,
+          datasets: [
+            {
+              backgroundColor: barColors,
+              data: yValues,
+            },
+          ],
+        },
+        options: {
+          title: {
+            display: false,
+          },
+          legend: {
+            display: true,
+            position: "bottom",
+            align: "start",
+          },
+        },
+      });
+      new Chart("prospects", {
+        type: "doughnut",
+        data: {
+          labels: xValues,
+          datasets: [
+            {
+              backgroundColor: barColors,
+              data: yValues,
+            },
+          ],
+        },
+        options: {
+          title: {
+            display: false,
+          },
+          legend: {
+            display: true,
+            position: "bottom",
+            align: "start",
+          },
+        },
+      });
+      new Chart("offers", {
+        type: "doughnut",
+        data: {
+          labels: xValues,
+          datasets: [
+            {
+              backgroundColor: barColors,
+              data: yValues,
+            },
+          ],
+        },
+        options: {
+          title: {
+            display: false,
+          },
+          legend: {
+            display: true,
+            position: "bottom",
+            align: "start",
+          },
+        },
+      });
+    </script>
+    <script src="../js/sidebar.js"></script>
+  </body>
+</html>
