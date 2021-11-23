@@ -10,11 +10,11 @@
 
     <link rel="stylesheet" href=styles.css>
 
-    <title>Offers</title>
+    <title>Customers</title>
 
 </head>
 
-<body class="bg-blueGrayLight">
+<body>
 
     <nav class="flex items-center justify-between flex-wrap bg-white px-8 mdlg:px-16 fixed top-0 inset-x-0 z-10 shadow-md">
         <div class="flex items-center justify-between">
@@ -37,17 +37,17 @@
             </div>
         </div>
     </nav>
-    <div id='sidebar-menu shadow-md'
-        class='fixed w-80 bg-white h-screen top-0 left-0 pt-16 sidebar sidebar-hidden transform transform-gpu mdlg:translate-x-0'>
+    <div id='sidebar-menu'
+        class='fixed w-80 shadow-md bg-white h-screen top-0 left-0 pt-16 sidebar sidebar-hidden transform transform-gpu mdlg:translate-x-0'>
         <div class="w-full">
-            <a class='w-full block px-16 py-6 border-b border-inputBorderGray font-semibold hover:text-primary text-primary' href='#'
-                role='button'>
+            <a class='w-full block px-16 py-6 border-b border-inputBorderGray font-semibold hover:text-primary'
+                href='#' role='button'>
                 Offers
             </a>
         </div>
         <div class="w-full">
-            <a class='w-full block px-16 py-6 border-b border-inputBorderGray font-semibold hover:text-primary'
-                href='#' role='button'>
+            <a class='w-full block px-16 py-6 border-b border-inputBorderGray font-semibold hover:text-primary text-primary' href='#'
+                role='button'>
                 Customers
             </a>
         </div>
@@ -79,13 +79,19 @@
         </div>
     </div>
 
-    <div class="w-full mdlg:w-11/12 mx-auto h-auto px-16 mdlg:pl-80 pt-14">
+    <div class="w-full mdlg:w-11/12 mx-auto h-auto px-16 pt-16 mdlg:pl-80">
         <div class="w-full flex flex-col md:flex-row md:justify-between my-12">
-            <h1 class="text-4xl text-bold">Offers</h1>
-            <button
-                class="bg-primary hover:bg-white text-white hover:text-primary hover:border-primary border-2 font-bold py-2 px-4 mt-4 md: mt-0 rounded-md focus:outline-none focus:shadow-outline">
-                Add New Offer
-            </button>
+            <h1 class="text-4xl text-bold">Customers</h1>
+            <div class="mt-4 md:mt-0 flex flex-col md:flex-row">
+                <button
+                    class="bg-white hover:bg-primary text-primary hover:text-white border-2 border-primary font-bold py-2 px-4 mb-2 md:mb-0 mr-0 md:mr-2 rounded-md focus:outline-none focus:shadow-outline">
+                    Import Bulk Customers
+                </button>
+                <button
+                    class="bg-primary hover:bg-white text-white hover:text-primary hover:border-primary border-2 font-bold py-2 px-4 rounded-md focus:outline-none focus:shadow-outline">
+                    Add New Offer
+                </button>
+            </div>
         </div>
 
         <div class="h-auto mb-12">
@@ -99,7 +105,6 @@
                         border-grey
                         px-2
                         md:px-8
-                        bg-white
                     ">
                         <table class="min-w-full">
                             <thead class="bg-white">
@@ -118,7 +123,7 @@
                                         pb-3
                                         text-left text-lg text-bold
                                     ">
-                                        Offer
+                                        First Name
                                     </th>
                                     <th scope="col" class="
                                         px-6
@@ -126,17 +131,7 @@
                                         pb-3
                                         text-left text-lg text-bold
                                     ">
-                                        Partner
-                                    </th>
-                                    <th scope="col" class="
-                                        px-6
-                                        pt-12
-                                        pb-3
-                                        text-left text-lg text-bold
-                                        hidden
-                                        md:table-cell
-                                    ">
-                                        Expiary Date
+                                        Last Name
                                     </th>
                                     <th scope="col" class="
                                         px-6
@@ -146,7 +141,7 @@
                                         hidden
                                         md:table-cell
                                     ">
-                                        Status
+                                        Email
                                     </th>
                                     <th scope="col" class="
                                         px-6
@@ -156,7 +151,36 @@
                                         hidden
                                         md:table-cell
                                     ">
-                                        Edit
+                                        Mobile
+                                    </th>
+                                    <th scope="col" class="
+                                        px-6
+                                        pt-12
+                                        pb-3
+                                        text-center text-lg text-bold
+                                        hidden
+                                        md:table-cell
+                                    ">
+                                        No. of Referrals
+                                    </th>
+                                    <th scope="col" class="
+                                        px-6
+                                        pt-12
+                                        pb-3
+                                        text-left text-lg text-bold
+                                        hidden
+                                        md:table-cell
+                                    ">
+                                        Active
+                                    </th>
+                                    <th scope="col" class="
+                                        px-6
+                                        pt-12
+                                        pb-3
+                                        text-left text-lg text-bold
+                                        hidden
+                                        md:table-cell
+                                    ">
                                     </th>
                                 </tr>
                             </thead>
@@ -164,90 +188,42 @@
                                 <tr class="bg-blueGrayLight border-t-2 border-b-2 border-grey">
                                     <td class="md:px-4 text-sm py-2 whitespace-nowrap md:hidden">
                                         <div class="h-5 w-5 bg-primary rounded-full flex justify-center items-center">
-                                            <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3" fill="#FFF" viewBox="0 0 24 24" stroke="#FFF">
-                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="4" d="M12 4v16m8-8H4" />
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3" fill="#FFF"
+                                                viewBox="0 0 24 24" stroke="#FFF">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="4"
+                                                    d="M12 4v16m8-8H4" />
                                             </svg>
                                         </div>
                                     </td>
                                     <td class="md:px-4 text-sm py-2 whitespace-nowrap">
-                                        Offer Title
+                                        John
                                     </td>
                                     <td class="px-4 text-sm py-2 whitespace-nowrap">
-                                        email@email.com
+                                        Smith
                                     </td>
                                     <td class="md:px-4 text-sm py-2 whitespace-nowrap hidden md:table-cell">
-                                        XX/XX/XX
+                                        email@email.com
                                     </td>
                                     <td class="px-4 text-sm py-2 whitespace-nowrap hidden md:table-cell">
-                                        <span class="px-4 font-medium bg-green text-white rounded py-0.5">
-                                            Published
-                                        </span>
+                                        07123456789
                                     </td>
-                                    <td class="md:px-4 py-2 whitespace-nowrap hidden md:table-cell">
-                                        <div class="h-10 w-10 bg-darkGrey rounded-full flex justify-center items-center">
-                                            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 ml-2" viewBox="0 0 24 24" fill="#fff">
-                                                <path
-                                                    d="M13.586 3.586a2 2 0 112.828 2.828l-.793.793-2.828-2.828.793-.793zM11.379 5.793L3 14.172V17h2.828l8.38-8.379-2.83-2.828z" />
+                                    <td class="px-4 text-sm text-center py-2 whitespace-nowrap hidden md:table-cell">
+                                        01
+                                    </td>
+                                    <td class="px-4 text-sm py-2 whitespace-nowrap hidden md:table-cell">
+                                        <div class="flex justify-center">
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="#10B981">
+                                                <path fill-rule="evenodd"
+                                                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                                    clip-rule="evenodd" />
                                             </svg>
                                         </div>
                                     </td>
-                                </tr>
-                                <tr>
-                                    <td class="md:px-4 text-sm py-2 whitespace-nowrap md:hidden">
-                                    <div class="h-5 w-5 bg-primary rounded-full flex justify-center items-center">
-                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3" fill="#FFF" viewBox="0 0 24 24" stroke="#FFF">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="4" d="M12 4v16m8-8H4" />
-                                        </svg>
-                                    </div>
-                                    </td>
-                                    <td class="md:px-4 text-sm py-2 whitespace-nowrap">
-                                        Offer Title
-                                    </td>
-                                    <td class="px-4 text-sm py-2 whitespace-nowrap">
-                                        email@email.com
-                                    </td>
-                                    <td class="md:px-4 text-sm py-2 whitespace-nowrap hidden md:table-cell">
-                                        XX/XX/XX
-                                    </td>
-                                    <td class="px-4 text-sm py-2 whitespace-nowrap hidden md:table-cell">
-                                        <span class="px-4 font-medium bg-green text-white rounded py-0.5">
-                                            Published
-                                        </span>
-                                    </td>
                                     <td class="md:px-4 py-2 whitespace-nowrap hidden md:table-cell">
-                                        <div class="h-10 w-10 bg-darkGrey rounded-full flex justify-center items-center">
-                                            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 ml-2" viewBox="0 0 24 24" fill="#fff">
-                                                <path
-                                                    d="M13.586 3.586a2 2 0 112.828 2.828l-.793.793-2.828-2.828.793-.793zM11.379 5.793L3 14.172V17h2.828l8.38-8.379-2.83-2.828z" />
-                                            </svg>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr class="bg-blueGrayLight border-t-2 border-b-2 border-grey">
-                                    <td class="md:px-4 text-sm py-2 whitespace-nowrap md:hidden">
-                                        <div class="h-5 w-5 bg-primary rounded-full flex justify-center items-center">
-                                            <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3" fill="#FFF" viewBox="0 0 24 24" stroke="#FFF">
-                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="4" d="M12 4v16m8-8H4" />
-                                            </svg>
-                                        </div>
-                                    </td>
-                                    <td class="md:px-4 text-sm py-2 whitespace-nowrap">
-                                        Offer Title
-                                    </td>
-                                    <td class="px-4 text-sm py-2 whitespace-nowrap">
-                                        email@email.com
-                                    </td>
-                                    <td class="md:px-4 text-sm py-2 whitespace-nowrap hidden md:table-cell">
-                                        XX/XX/XX
-                                    </td>
-                                    <td class="px-4 text-sm py-2 whitespace-nowrap hidden md:table-cell">
-                                        <span class="px-4 font-medium bg-green text-white rounded py-0.5">
-                                            Published
-                                        </span>
-                                    </td>
-                                    <td class="md:px-4 py-2 whitespace-nowrap hidden md:table-cell">
-                                        <div class="h-10 w-10 bg-darkGrey rounded-full flex justify-center items-center">
-                                            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 ml-2" viewBox="0 0 24 24" fill="#fff">
+                                        <div
+                                            class="h-10 w-10 bg-darkGrey rounded-full flex justify-center items-center">
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 ml-2"
+                                                viewBox="0 0 24 24" fill="#fff">
                                                 <path
                                                     d="M13.586 3.586a2 2 0 112.828 2.828l-.793.793-2.828-2.828.793-.793zM11.379 5.793L3 14.172V17h2.828l8.38-8.379-2.83-2.828z" />
                                             </svg>
@@ -257,28 +233,42 @@
                                 <tr>
                                     <td class="md:px-4 text-sm py-2 whitespace-nowrap md:hidden">
                                         <div class="h-5 w-5 bg-primary rounded-full flex justify-center items-center">
-                                            <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3" fill="#FFF" viewBox="0 0 24 24" stroke="#FFF">
-                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="4" d="M12 4v16m8-8H4" />
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3" fill="#FFF"
+                                                viewBox="0 0 24 24" stroke="#FFF">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="4"
+                                                    d="M12 4v16m8-8H4" />
                                             </svg>
                                         </div>
                                     </td>
                                     <td class="md:px-4 text-sm py-2 whitespace-nowrap">
-                                        Offer Title
+                                        John
                                     </td>
                                     <td class="px-4 text-sm py-2 whitespace-nowrap">
-                                        email@email.com
+                                        Smith
                                     </td>
                                     <td class="md:px-4 text-sm py-2 whitespace-nowrap hidden md:table-cell">
-                                        XX/XX/XX
+                                        email@email.com
                                     </td>
                                     <td class="px-4 text-sm py-2 whitespace-nowrap hidden md:table-cell">
-                                        <span class="w-8 px-8 font-medium bg-yellow text-white rounded py-0.5">
-                                            Draft
-                                        </span>
+                                        07123456789
+                                    </td>
+                                    <td class="px-4 text-sm text-center py-2 whitespace-nowrap hidden md:table-cell">
+                                        01
+                                    </td>
+                                    <td class="px-4 text-sm py-2 whitespace-nowrap hidden md:table-cell">
+                                        <div class="flex justify-center">
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="#10B981">
+                                                <path fill-rule="evenodd"
+                                                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                                    clip-rule="evenodd" />
+                                            </svg>
+                                        </div>
                                     </td>
                                     <td class="md:px-4 py-2 whitespace-nowrap hidden md:table-cell">
-                                        <div class="h-10 w-10 bg-darkGrey rounded-full flex justify-center items-center">
-                                            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 ml-2" viewBox="0 0 24 24" fill="#fff">
+                                        <div
+                                            class="h-10 w-10 bg-darkGrey rounded-full flex justify-center items-center">
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 ml-2"
+                                                viewBox="0 0 24 24" fill="#fff">
                                                 <path
                                                     d="M13.586 3.586a2 2 0 112.828 2.828l-.793.793-2.828-2.828.793-.793zM11.379 5.793L3 14.172V17h2.828l8.38-8.379-2.83-2.828z" />
                                             </svg>
@@ -288,28 +278,132 @@
                                 <tr class="bg-blueGrayLight border-t-2 border-b-2 border-grey">
                                     <td class="md:px-4 text-sm py-2 whitespace-nowrap md:hidden">
                                         <div class="h-5 w-5 bg-primary rounded-full flex justify-center items-center">
-                                            <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3" fill="#FFF" viewBox="0 0 24 24" stroke="#FFF">
-                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="4" d="M12 4v16m8-8H4" />
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3" fill="#FFF"
+                                                viewBox="0 0 24 24" stroke="#FFF">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="4"
+                                                    d="M12 4v16m8-8H4" />
                                             </svg>
                                         </div>
                                     </td>
                                     <td class="md:px-4 text-sm py-2 whitespace-nowrap">
-                                        Offer Title
+                                        John
                                     </td>
                                     <td class="px-4 text-sm py-2 whitespace-nowrap">
-                                        email@email.com
+                                        Smith
                                     </td>
                                     <td class="md:px-4 text-sm py-2 whitespace-nowrap hidden md:table-cell">
-                                        XX/XX/XX
+                                        email@email.com
                                     </td>
                                     <td class="px-4 text-sm py-2 whitespace-nowrap hidden md:table-cell">
-                                        <span class="px-8 font-medium bg-yellow text-white rounded py-0.5">
-                                            Draft
-                                        </span>
+                                        07123456789
+                                    </td>
+                                    <td class="px-4 text-sm text-center py-2 whitespace-nowrap hidden md:table-cell">
+                                        01
+                                    </td>
+                                    <td class="px-4 text-sm py-2 whitespace-nowrap hidden md:table-cell">
+                                        <div class="flex justify-center">
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="#10B981">
+                                                <path fill-rule="evenodd"
+                                                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                                    clip-rule="evenodd" />
+                                            </svg>
+                                        </div>
                                     </td>
                                     <td class="md:px-4 py-2 whitespace-nowrap hidden md:table-cell">
-                                        <div class="h-10 w-10 bg-darkGrey rounded-full flex justify-center items-center">
-                                            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 ml-2" viewBox="0 0 24 24" fill="#fff">
+                                        <div
+                                            class="h-10 w-10 bg-darkGrey rounded-full flex justify-center items-center">
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 ml-2"
+                                                viewBox="0 0 24 24" fill="#fff">
+                                                <path
+                                                    d="M13.586 3.586a2 2 0 112.828 2.828l-.793.793-2.828-2.828.793-.793zM11.379 5.793L3 14.172V17h2.828l8.38-8.379-2.83-2.828z" />
+                                            </svg>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="md:px-4 text-sm py-2 whitespace-nowrap md:hidden">
+                                        <div class="h-5 w-5 bg-primary rounded-full flex justify-center items-center">
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3" fill="#FFF"
+                                                viewBox="0 0 24 24" stroke="#FFF">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="4"
+                                                    d="M12 4v16m8-8H4" />
+                                            </svg>
+                                        </div>
+                                    </td>
+                                    <td class="md:px-4 text-sm py-2 whitespace-nowrap">
+                                        John
+                                    </td>
+                                    <td class="px-4 text-sm py-2 whitespace-nowrap">
+                                        Smith
+                                    </td>
+                                    <td class="md:px-4 text-sm py-2 whitespace-nowrap hidden md:table-cell">
+                                        email@email.com
+                                    </td>
+                                    <td class="px-4 text-sm py-2 whitespace-nowrap hidden md:table-cell">
+                                        07123456789
+                                    </td>
+                                    <td class="px-4 text-sm text-center py-2 whitespace-nowrap hidden md:table-cell">
+                                        01
+                                    </td>
+                                    <td class="px-4 text-sm py-2 whitespace-nowrap hidden md:table-cell">
+                                        <div class="flex justify-center">
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="#10B981">
+                                                <path fill-rule="evenodd"
+                                                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                                    clip-rule="evenodd" />
+                                            </svg>
+                                        </div>
+                                    </td>
+                                    <td class="md:px-4 py-2 whitespace-nowrap hidden md:table-cell">
+                                        <div
+                                            class="h-10 w-10 bg-darkGrey rounded-full flex justify-center items-center">
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 ml-2"
+                                                viewBox="0 0 24 24" fill="#fff">
+                                                <path
+                                                    d="M13.586 3.586a2 2 0 112.828 2.828l-.793.793-2.828-2.828.793-.793zM11.379 5.793L3 14.172V17h2.828l8.38-8.379-2.83-2.828z" />
+                                            </svg>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr class="bg-blueGrayLight border-t-2 border-b-2 border-grey">
+                                    <td class="md:px-4 text-sm py-2 whitespace-nowrap md:hidden">
+                                        <div class="h-5 w-5 bg-primary rounded-full flex justify-center items-center">
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3" fill="#FFF"
+                                                viewBox="0 0 24 24" stroke="#FFF">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="4"
+                                                    d="M12 4v16m8-8H4" />
+                                            </svg>
+                                        </div>
+                                    </td>
+                                    <td class="md:px-4 text-sm py-2 whitespace-nowrap">
+                                        John
+                                    </td>
+                                    <td class="px-4 text-sm py-2 whitespace-nowrap">
+                                        Smith
+                                    </td>
+                                    <td class="md:px-4 text-sm py-2 whitespace-nowrap hidden md:table-cell">
+                                        email@email.com
+                                    </td>
+                                    <td class="px-4 text-sm py-2 whitespace-nowrap hidden md:table-cell">
+                                        07123456789
+                                    </td>
+                                    <td class="px-4 text-sm text-center py-2 whitespace-nowrap hidden md:table-cell">
+                                        01
+                                    </td>
+                                    <td class="px-4 text-sm py-2 whitespace-nowrap hidden md:table-cell">
+                                        <div class="flex justify-center">
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="#10B981">
+                                                <path fill-rule="evenodd"
+                                                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                                    clip-rule="evenodd" />
+                                            </svg>
+                                        </div>
+                                    </td>
+                                    <td class="md:px-4 py-2 whitespace-nowrap hidden md:table-cell">
+                                        <div
+                                            class="h-10 w-10 bg-darkGrey rounded-full flex justify-center items-center">
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 ml-2"
+                                                viewBox="0 0 24 24" fill="#fff">
                                                 <path
                                                     d="M13.586 3.586a2 2 0 112.828 2.828l-.793.793-2.828-2.828.793-.793zM11.379 5.793L3 14.172V17h2.828l8.38-8.379-2.83-2.828z" />
                                             </svg>

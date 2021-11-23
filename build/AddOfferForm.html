@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href=styles.css>
+
+    <title>Add Offer</title>
+
+</head>
+
+<body class="bg-blueGrayLight">
+
+    <nav class="flex items-center justify-between flex-wrap bg-white px-8 mdlg:px-16 fixed top-0 inset-x-0 z-10 shadow-md">
+        <div class="flex items-center justify-between">
+            <button id='sidebar-toggle-button'
+                class="flex items-center px-3 py-2 border rounded text-teal-200 border-teal-400 mr-4 block mdlg:hidden">
+                <svg class="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                    <title>Menu</title>
+                    <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
+                </svg>
+            </button>
+            <a href="#">
+                <img src='../public/images/logo.jpg' width="200" />
+            </a>
+        </div>
+        <div class="inline-block lg:flex lg:items-center lg:w-auto py-4">
+            <div>
+                <a href="#">
+                    <img class="rounded-full" src="../public/icons/profile-placeholder.jpg" width="30" />
+                </a>
+            </div>
+        </div>
+    </nav>
+    <div id='sidebar-menu'
+        class='fixed w-80 shadow-md bg-white h-screen top-0 left-0 pt-16 sidebar sidebar-hidden transform transform-gpu mdlg:translate-x-0'>
+        <div class="w-full">
+            <a class='w-full block px-16 py-6 border-b border-inputBorderGray font-semibold hover:text-primary text-primary'
+                href='#' role='button'>
+                Offers
+            </a>
+        </div>
+        <div class="w-full">
+            <a class='w-full block px-16 py-6 border-b border-inputBorderGray font-semibold hover:text-primary' href='#'
+                role='button'>
+                Customers
+            </a>
+        </div>
+        <div class="w-full">
+            <a class='w-full block px-16 py-6 border-b border-inputBorderGray font-semibold hover:text-primary' href='#'
+                role='button'>
+                Reports
+            </a>
+        </div>
+        <div class="w-full pl-14 hidden">
+            <a class='w-full block px-8 py-2 font-semibold hover:text-primary' href='#' role='button'>
+                Invitations
+            </a>
+            <a class='w-full block px-8 py-2 font-semibold hover:text-primary' href='#' role='button'>
+                Referrals
+            </a>
+            <a class='w-full block px-8 py-2 font-semibold hover:text-primary' href='#' role='button'>
+                Colleagues
+            </a>
+            <a class='w-full block px-8 py-2 font-semibold hover:text-primary' href='#' role='button'>
+                Conversions
+            </a>
+            <a class='w-full block px-8 py-2 font-semibold hover:text-primary' href='#' role='button'>
+                Prospects
+            </a>
+            <a class='w-full block px-8 py-2 font-semibold hover:text-primary' href='#' role='button'>
+                Offers
+            </a>
+        </div>
+    </div>
+
+    <div class="w-full mdlg:w-11/12 mx-auto h-auto px-16 pt-24 mdlg:pl-80">
+        <h1 class="text-4xl text-bold mb-6">Add Offer</h1>
+
+        <div class="h-auto mb-12 bg-white">
+            <div class="flex flex-col shadow py-4 px-12">
+                <form class="w-2/3">
+                    
+                    <div class="flex flex-wrap -mx-3 mb-6">
+                        <div class="w-full px-3">
+                            <label class="block tracking-wide text-gray-700 text-sm font-bold mb-2" for="grid-password">
+                                Offer Status
+                            </label>
+                            <div class="mt-4 md:mt-0 flex flex-col md:flex-row">
+                                <button
+                                    class="bg-primaryBlueLight hover:bg-primary text-primary hover:text-white border-2 border-primary font-bold px-4 rounded-md focus:outline-none focus:shadow-outline">
+                                    Published
+                                </button>
+                                <button
+                                    class="bg-blueGrayLight font-bold px-4 rounded-md focus:outline-none focus:shadow-outline">
+                                    Draft
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-wrap -mx-3 mb-6">
+                        <div class="w-full px-3">
+                            <label class="block tracking-wide text-gray-700 text-sm font-bold mb-2" for="grid-password">
+                                Offer Title
+                            </label>
+                            <input
+                                class="appearance-none block w-full bg-gray-200 text-gray-700 border-2 border-inputBorderGray rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:border-primary focus:bg-white"
+                                id="offer-title" type="text" placeholder="Enter The Offer Title">
+                        </div>
+                    </div>
+
+                    <div class="flex flex-wrap -mx-3 mb-6">
+                        <div class="w-full px-3">
+                            <label class="block tracking-wide text-gray-700 text-sm font-bold mb-2" for="grid-password">
+                                Description
+                            </label>
+
+                            <textarea class="appearance-none block w-full bg-gray-200 text-gray-700 border-2 border-inputBorderGray rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:border-primary focus:bg-white"
+                                id="offer-description" type="text" placeholder="Enter The Offer Description">
+                            </textarea>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-wrap -mx-3 mb-6">
+                        <div class="w-full px-3">
+                            <label for='img' class="block tracking-wide text-gray-700 text-sm font-bold mb-2" for="grid-password">
+                                Add Image
+                            </label>
+
+                            <label class="w-2/3 flex justify-between items-center appearance-none block w-full bg-gray-200 text-gray-700 border-2 border-inputBorderGray rounded px-4 mb-3 leading-tight focus:outline-none focus:border-primary focus:bg-white">
+                                <input type="file" class="hidden" />
+                                <p>Choose File</p>
+                                <button id='image'class="bg-primary text-white border-2 font-bold py-2 px-4 rounded-md focus:outline-none focus:shadow-outline">
+                                    Browse
+                                </button>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-wrap -mx-3 mb-6">
+                        <div class="w-full px-3">
+                            <img src='../public/images/placeholder-background.PNG' height="160px" width="160px" />
+                        </div>
+                    </div>
+
+                    <div class="flex flex-wrap -mx-3 mb-6">
+                        <div class="w-full px-3">
+                            <label class="block tracking-wide text-gray-700 text-sm font-bold mb-2" for="grid-password">
+                                Expiry Date
+                            </label>
+                            <input
+                                class="appearance-none block w-full bg-gray-200 text-gray-700 border-2 border-inputBorderGray rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:border-primary focus:bg-white"
+                                id="offer-date" type="text" placeholder="DD/MM/YYYY">
+                        </div>
+                    </div>
+
+                    <div class="flex flex-wrap -mx-3 mb-6">
+                        <div class="w-full px-3">
+                            <label class="block tracking-wide text-gray-700 text-sm font-bold mb-2" for="grid-password">
+                                Partner Email
+                            </label>
+                            <input
+                                class="appearance-none block w-full bg-gray-200 text-gray-700 border-2 border-inputBorderGray rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:border-primary focus:bg-white"
+                                id="partner-email" type="text" placeholder="Enter The Partner Email">
+                        </div>
+                    </div>
+
+                    <button type="submit"
+                        class="bg-primary text-white border-2 font-bold py-2 px-4 rounded-md focus:outline-none focus:shadow-outline">
+                        Save
+                    </button>
+
+                </form>
+
+            </div>
+        </div>
+
+    </div>
+    <footer class="w-full border-t border-grey px-8 flex justify-between items-center relative z-20 py-8 bg-white">
+        <p>2021 © Powered by JudgeService</p>
+        <div class="flex justify-between items-center">
+            <a href="#" class="mr-4">Terms and Conditions</a>
+            <a href="#">Privacy Policy</a>
+        </div>
+    </footer>
+    <script src="../js/sidebar.js"></script>
+</body>
+
+</html>

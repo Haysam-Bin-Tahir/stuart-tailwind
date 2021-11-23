@@ -20,6 +20,7 @@ module.exports = {
       gradientStart: '#1c94d1',
       gradientMiddle: '#4caadd',
       gradientEnd: '#72c5e5',
+      primaryBlueLight: '#dcf0f9',
     },
     // boxShadow: {
     //   DEFAULT: "5px 5px 5px rgba(0 0 0 / 10%)",
