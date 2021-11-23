@@ -18,9 +18,9 @@ module.exports = {
       green: "#10B981",
       yellow: "#F59E0B",
     },
-    boxShadow: {
-      DEFAULT: "5px 5px 5px rgba(0 0 0 / 10%)",
-    },
+    // boxShadow: {
+    //   DEFAULT: "5px 5px 5px rgba(0 0 0 / 10%)",
+    // },
     extend: {
       width: {
         "1/7": "14.2857143%",
@@ -31,6 +31,9 @@ module.exports = {
         "6/7": "85.7142857%",
         "3/10": "30%",
       },
+      screens: {
+        "mdlg": "930px"
+      }
     },
   },
   variants: {

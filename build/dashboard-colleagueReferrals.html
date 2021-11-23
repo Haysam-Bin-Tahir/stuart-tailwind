@@ -10,8 +10,67 @@
   </head>
 
   <body class="bg-blueGrayLight">
-    <div class="mt-5 w-full h-full">
-      <div class="md:w-3/5 sm:px-16 px-6 w-full h-full pt-8 rounded">
+    <nav class="flex items-center justify-between flex-wrap bg-white px-8 mdlg:px-16 fixed top-0 inset-x-0 z-10 shadow-md">
+      <div class="flex items-center justify-between">
+        <button
+        id='sidebar-toggle-button'
+          class="flex items-center px-3 py-2 border rounded text-teal-200 border-teal-400 mr-4 block mdlg:hidden">
+          <svg class="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+            <title>Menu</title>
+            <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
+          </svg>
+        </button>
+        <a href="#">
+          <img src='../public/images/logo.jpg' width="200" />
+        </a>
+      </div>
+      <div class="inline-block lg:flex lg:items-center lg:w-auto py-4">
+        <div>
+          <a href="#">
+            <img class="rounded-full" src="../public/icons/profile-placeholder.jpg" width="30" />
+          </a>
+        </div>
+      </div>
+    </nav>
+    <div id='sidebar-menu' class='fixed w-80 bg-white h-screen top-0 left-0 pt-16 sidebar sidebar-hidden transform transform-gpu mdlg:translate-x-0'>
+      <div class="w-full">
+        <a class='w-full block px-16 py-6 border-b border-inputBorderGray font-semibold hover:text-primary' href='#' role='button'>
+          Offers
+        </a>
+      </div>
+      <div class="w-full">
+        <a class='w-full block px-16 py-6 border-b border-inputBorderGray font-semibold hover:text-primary' href='#' role='button'>
+          Customers
+        </a>
+      </div>
+      <div class="w-full">
+        <a class='w-full block px-16 py-6 border-b border-inputBorderGray font-semibold hover:text-primary text-primary' href='#' role='button'>
+          Reports
+        </a>
+      </div>
+      <div class="w-full pl-14">
+        <a class='w-full block px-8 py-2 font-semibold hover:text-primary' href='#' role='button'>
+          Invitations
+        </a>
+        <a class='w-full block px-8 py-2 font-semibold hover:text-primary' href='#' role='button'>
+          Referrals
+        </a>
+        <a class='w-full block px-8 py-2 font-semibold hover:text-primary' href='#' role='button'>
+          Colleagues
+        </a>
+        <a class='w-full block px-8 py-2 font-semibold hover:text-primary' href='#' role='button'>
+          Conversions
+        </a>
+        <a class='w-full block px-8 py-2 font-semibold hover:text-primary' href='#' role='button'>
+          Prospects
+        </a>
+        <a class='w-full block px-8 py-2 font-semibold hover:text-primary' href='#' role='button'>
+          Offers
+        </a>
+      </div>
+    </div>
+    <div class="mt-5 w-full h-full mdlg:pl-80 pt-14">
+      <div class="md:w-full sm:px-16 px-6 w-full h-full pt-8 rounded">
         <p class="text-3xl font-bold mb-6">Colleague Referrals</p>
         <div
           class="flex flex-col bg-white shadow p-10 border-l-8 border-primary"
@@ -179,5 +238,6 @@
         },
       });
     </script>
+    <script src="../js/sidebar.js"></script>
   </body>
 </html>

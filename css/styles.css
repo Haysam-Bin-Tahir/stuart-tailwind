@@ -39,4 +39,63 @@
   input[name="faq"]:checked ~ .accordion__content {
     max-height: 50em;
   }
+
+  .sidebar {
+    will-change: transform;
+    transition: transform .3s ease-in-out;
+  }
+
+  .sidebar-hidden {
+    transform: translateX(-100%);
+  }
+}
+
+canvas[id=myChart],
+canvas[id=referralsOffered],
+canvas[id=referralsFulfilled],
+canvas[id=referralsConversionRate],
+canvas[id=referralsVsSales] {
+  max-width: none !important;
+  width: 730px !important;
+  height: 375px !important;
+  margin: 0 auto !important;
+}
+
+@media screen and (max-width: 1240px) {
+ canvas[id=myChart],
+ canvas[id=referralsOffered],
+ canvas[id=referralsFulfilled],
+ canvas[id=referralsConversionRate],
+ canvas[id=referralsVsSales] {
+  max-width: 600px !important;
+  width: 600px !important;
+  height: 375px !important;
+  margin: 0 auto !important;
+  } 
+}
+
+@media screen and (max-width: 1115px) {
+ canvas[id=myChart],
+ canvas[id=referralsOffered],
+ canvas[id=referralsFulfilled],
+ canvas[id=referralsConversionRate],
+ canvas[id=referralsVsSales] {
+  max-width: 500px !important;
+  width: 500px !important;
+  height: 375px !important;
+  margin: 0 auto !important;
+  } 
+}
+
+@media screen and (max-width: 1015px) {
+ canvas[id=myChart],
+ canvas[id=referralsOffered],
+ canvas[id=referralsFulfilled],
+ canvas[id=referralsConversionRate],
+ canvas[id=referralsVsSales] {
+  max-width: 400px !important;
+  width: 400px !important;
+  height: 375px !important;
+  margin: 0 auto !important;
+  } 
 }
