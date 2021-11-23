@@ -971,10 +971,6 @@ video {
 	--tw-bg-opacity: 1;
 	background-color: rgba(255, 255, 255, var(--tw-bg-opacity));
 }
-.bg-blueGrayLight {
-	--tw-bg-opacity: 1;
-	background-color: rgba(241, 243, 244, var(--tw-bg-opacity));
-}
 .bg-primary {
 	--tw-bg-opacity: 1;
 	background-color: rgba(43, 173, 225, var(--tw-bg-opacity));
@@ -982,6 +978,10 @@ video {
 .bg-inputBorderGray {
 	--tw-bg-opacity: 1;
 	background-color: rgba(226, 232, 240, var(--tw-bg-opacity));
+}
+.bg-blueGrayLight {
+	--tw-bg-opacity: 1;
+	background-color: rgba(241, 243, 244, var(--tw-bg-opacity));
 }
 .bg-primaryDark {
 	--tw-bg-opacity: 1;
@@ -1003,6 +1003,9 @@ video {
 	--tw-bg-opacity: 1;
 	background-color: rgba(222, 222, 222, var(--tw-bg-opacity));
 }
+.bg-hero-image {
+	background-image: url('../public/images/placeholder-background.PNG');
+}
 .bg-gradient-to-br {
 	background-image: linear-gradient(to bottom right, var(--tw-gradient-stops));
 }
@@ -1015,6 +1018,15 @@ video {
 }
 .to-gradientEnd {
 	--tw-gradient-to: #72c5e5;
+}
+.bg-cover {
+	background-size: cover;
+}
+.bg-center {
+	background-position: center;
+}
+.bg-no-repeat {
+	background-repeat: no-repeat;
 }
 .fill-current {
 	fill: currentColor;
@@ -1275,7 +1287,7 @@ video {
 	content: "";
 	border-top-right-radius: 0.375rem;
 }
-label:after {
+.label:after {
     content: "+";
     position: absolute;
     top: 0.75rem;
@@ -1285,7 +1297,7 @@ label:after {
     --tw-text-opacity: 1;
     color: rgba(0, 0, 0, var(--tw-text-opacity));
   }
-input:checked + label:after {
+input:checked + .label:after {
     content: "-";
     line-height: 0.8em;
     top: 0.75rem;
@@ -1357,10 +1369,6 @@ canvas[id=referralsVsSales] {
   height: 375px !important;
   margin: 0 auto !important;
   } 
-}
-
-label::after {
-  content: '' !important;
 }
 
 .hover\:border:hover {

@@ -15,7 +15,7 @@
     @apply after:rounded-tl-md;
     @apply after:rounded-tr-md;
   }
-  label:after {
+  .label:after {
     content: "+";
     position: absolute;
     @apply top-3;
@@ -24,7 +24,7 @@
     @apply text-black;
   }
 
-  input:checked + label:after {
+  input:checked + .label:after {
     content: "-";
     line-height: 0.8em;
     @apply top-3;
@@ -98,8 +98,4 @@ canvas[id=referralsVsSales] {
   height: 375px !important;
   margin: 0 auto !important;
   } 
-}
-
-label::after {
-  content: '' !important;
 }

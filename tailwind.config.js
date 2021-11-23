@@ -36,7 +36,10 @@ module.exports = {
       },
       screens: {
         "mdlg": "930px"
-      }
+      },
+      backgroundImage: {
+        'hero-image': "url('../public/images/placeholder-background.PNG')"
+      },
     },
   },
   variants: {
